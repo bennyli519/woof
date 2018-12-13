@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/Home/home",
+    "pages/Shoot/shoot",
+    "pages/Play/play",
+    "pages/Finish/finish",
+    "pages/Begin/begin"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "狼人杀",
+    "navigationBarTextStyle": "black"
+  }
+}

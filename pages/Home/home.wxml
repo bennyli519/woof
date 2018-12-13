@@ -1,0 +1,13 @@
+<!-- 首页 -->
+<view class="container">
+	<i-panel title="基础用法">
+		<view style="padding: 16px">
+			<i-input-number value="{{ value1 }}" min="0" max="100" bindchange="handleChange1" />
+		</view>
+	</i-panel>
+	
+	<view class="role-wrapper">
+		身份牌
+	</view>
+	<i-button type="primary" bind:click="handleClick">这是一个按钮</i-button>
+</view>
