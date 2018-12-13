@@ -1,5 +1,8 @@
 <!-- 首页 -->
 <view class="container">
+	<view class="home_banner">
+
+	</view>
 	<i-panel title="基础用法">
 		<view style="padding: 16px">
 			<i-input-number value="{{ value1 }}" min="0" max="100" bindchange="handleChange1" />
