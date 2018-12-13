@@ -10,3 +10,11 @@
 	background: red;
 	opacity: 0.5;
 }
+.home_banner{
+	padding: 20rpx;
+	background-color: black;
+	color: white;
+}
+.text-center{
+	text-align: center;
+}

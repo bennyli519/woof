@@ -1,13 +1,15 @@
 <!-- 首页 -->
 <view class="container">
 	<view class="home_banner">
-
+		<view class="text-center">请选择玩家人数<text class="">（不包括法官）</text></view>
+		<view class="text-center">please select the number of players</view>
+		<i-panel title="基础用法">
+			<view style="padding: 16px">
+				<i-input-number value="{{ value1 }}" min="0" max="100" bindchange="handleChange1" />
+			</view>
+		</i-panel>
 	</view>
-	<i-panel title="基础用法">
-		<view style="padding: 16px">
-			<i-input-number value="{{ value1 }}" min="0" max="100" bindchange="handleChange1" />
-		</view>
-	</i-panel>
+	
 	
 	<view class="role-wrapper">
 		身份牌
