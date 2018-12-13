@@ -1,7 +1,14 @@
 <!-- 拍摄页 -->
-<view class="container">
-  <camera device-position="front" flash="off" binderror="error" style="width: 100%; height: 300px;"></camera>
+<view id="shoot">
+  <view class="shoot_header"> 
+      <navigator class="text-fz24">返回</navigator>
+      <view>
+        <view>请依次传阅查看身份</view>
+        <view class="text-fz24 text-999">Please check your identity</view>
+      </view>
+  </view>
+  <!-- <camera device-position="front" flash="off" binderror="error" style="width: 100%; height: 300px;"></camera>
   <button type="primary" bindtap="takePhoto">拍照</button>
   <view>预览</view>
-  <image mode="widthFix" src="{{src}}"></image>
+  <image mode="widthFix" src="{{src}}"></image> -->
 </view>
