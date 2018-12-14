@@ -1,1 +1,47 @@
 /* pages/Play/play.wxss */
+#play{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+.play_header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding:0 40rpx;
+	height: 200rpx;
+	color:#fff;
+	background: #000;
+}
+.play_container{
+	flex:1;
+	padding:40rpx 0rpx 40rpx 20rpx;
+}
+.player_wrapper{
+	/* height: 230rpx; */
+	margin-right: 20rpx;
+	margin-bottom: 20rpx;
+	background: #fff;
+}
+.player_wrapper:nth-child(4n){
+	margin-right: 0 !important;
+}
+.player_wrapper image{
+	width: 100%;
+	height: 80px;
+}
+.player_wrapper .name{
+	margin-bottom: 10rpx;
+}
+.play_footer{
+	/* padding:0 40rpx; */
+	display: flex;
+	/* justify-content: space-between; */
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	height: 100rpx;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+}
