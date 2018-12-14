@@ -7,7 +7,8 @@ Page({
    */
   data: {
       playerNum:6,     
-      minPlayers: 6, //默认玩家
+      minPlayers: 6, // 默认玩家
+      roleList:app.globalData.RoleList
   },
 
   //stepper事件

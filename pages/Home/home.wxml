@@ -11,34 +11,18 @@
 	</view>
 	
 	<view class="role-container">
-		<i-row wx:for="i in 3">
-			<i-col span="8">
+		<i-row >
+			<i-col span="8" wx:for="{{roleList}}" wx:for-item="item" wx:key>
 				<view class="role-wrapper">
-					<view class="badge">x8</view>
+					<view class="badge">x{{item.Num}}</view>
 					<view class="img-wrapper">
-						<image  src="../../resources/images/role/children.png"></image>
+						<image  src="{{item.Photo}}"></image>
 						<!-- <view class="disable">
 							x
 						</view> -->
 					</view>
-					<view class="text-fz32 text-center name">野孩子</view>
+					<view class="text-fz32 text-center name">{{item.RoleName}}</view>
 
-				</view>
-			</i-col>
-			<i-col span="8">
-				<view class="role-wrapper">
-					<view class="badge">x8</view>
-					<image  src="../../resources/images/role/children.png"></image>
-					<view class="text-fz32 text-center name">野孩子</view>
-					<!-- <view class="text-fz30 text-center bg-red text-white">1号玩家</view> -->
-				</view>
-			</i-col>
-			<i-col span="8">
-				<view class="role-wrapper">
-					<view class="badge">x8</view>
-					<image  src="../../resources/images/role/children.png"></image>
-					<view class="text-fz32 text-center name">野孩子</view>
-					<!-- <view class="text-fz30 text-center bg-red text-white">1号玩家</view> -->
 				</view>
 			</i-col>
 		</i-row>
