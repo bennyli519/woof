@@ -10,7 +10,7 @@ page {
 }
 
 .bg-red {
-    background-color: #da4866 !important;
+    background-color: red !important;
 }
 
 .bg-blue {

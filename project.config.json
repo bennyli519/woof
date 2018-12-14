@@ -36,12 +36,18 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 1,
 			"list": [
 				{
 					"id": -1,
 					"name": "拍照",
-					"pathName": "pages/Shoot/shoot"
+					"pathName": "pages/Shoot/shoot",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "开始游戏",
+					"pathName": "pages/Begin/begin"
 				}
 			]
 		}
