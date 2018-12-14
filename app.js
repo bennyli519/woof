@@ -1,39 +1,73 @@
 //app.js
 App({
   onLaunch: function () {
-    // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
 
-    // 登录
-    wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-      }
-    })
-    // 获取用户信息
-    wx.getSetting({
-      success: res => {
-        if (res.authSetting['scope.userInfo']) {
-          // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-          wx.getUserInfo({
-            success: res => {
-              // 可以将 res 发送给后台解码出 unionId
-              this.globalData.userInfo = res.userInfo
-
-              // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-              // 所以此处加入 callback 以防止这种情况
-              if (this.userInfoReadyCallback) {
-                this.userInfoReadyCallback(res)
-              }
-            }
-          })
-        }
-      }
-    })
   },
   globalData: {
-    userInfo: null
+    RoleList:[
+      {
+        RoleId:1001,
+        RoleName:'平民',
+        RoleType:0,         //身份类型(0=>民 1=>狼  2=>神)
+        Photo:'路径',
+        Num:4,
+      },
+      {
+        RoleId:1002,
+        RoleName:'狼人',
+        RoleType:1,         //身份类型(0=>民 1=>狼  2=>神)
+        Photo:'路径',
+        Num:4,
+      },
+      {
+        RoleId:1003,
+        RoleName:'预言家',
+        RoleType:2,
+        Photo:'路径',
+        Num:1,
+      },
+      {
+        RoleId:1004,
+        RoleName:'女巫',
+        RoleType:2,
+        Photo:'路径',
+        Num:1,
+      },
+      {
+        RoleId:1005,
+        RoleName:'守卫',
+        RoleType:2,
+        Photo:'路径',
+        Num:1,
+      },
+      {
+        RoleId:1006,
+        RoleName:'猎人',
+        RoleType:2,
+        Photo:'路径',
+        Num:1,
+      },
+    ],
+    CurrentList: [   //玩家列表（配置好人数后点开始游戏,打乱身份 并存入该列表）
+                     //后续拍照啥的都存到这个列表 
+      {
+        Id:1,
+        RoleName:'狼人',
+        RoleType:1,
+        playerPic:'照片地址',
+      },
+      {
+        Id:2,
+        RoleName:'平民',
+        RoleType:0,
+        playerPic:'照片地址',
+      },
+      {
+        Id:3,
+        RoleName:'平民',
+        RoleType:0,
+        playerPic:'照片地址',
+      }
+    ]
   }
 })

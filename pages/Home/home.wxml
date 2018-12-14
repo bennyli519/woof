@@ -3,9 +3,9 @@
 	<view class="home_banner">
 		<view>请选择玩家人数<text class="text-fz28" decode="{{true}}">&nbsp;(不包括法官)</text></view>
 		<view class="text-fz24 text-999">please select the number of players</view>
-		<i-panel title="基础用法">
+		<i-panel>
 			<view style="padding: 16px">
-				<i-input-number value="{{ value1 }}" min="0" max="100" bindchange="handleChange1" />
+				<i-input-number value="{{ playerNum }}" min="{{minPlayers}}" max="100" bindchange="handleChange" />
 			</view>
 		</i-panel>
 	</view>
@@ -15,9 +15,14 @@
 			<i-col span="8">
 				<view class="role-wrapper">
 					<view class="badge">x8</view>
-					<image  src="../../resources/images/role/children.png"></image>
+					<view class="img-wrapper">
+						<image  src="../../resources/images/role/children.png"></image>
+						<!-- <view class="disable">
+							x
+						</view> -->
+					</view>
 					<view class="text-fz32 text-center name">野孩子</view>
-					<!-- <view class="text-fz30 text-center bg-red text-white">1号玩家</view> -->
+
 				</view>
 			</i-col>
 			<i-col span="8">
@@ -39,7 +44,7 @@
 		</i-row>
 	</view>
 	<view class="home_footer">
-		<view>当前已选12人</view>
+		<view>当前已选{{playerNum}}人</view>
 		<i-button type="primary" bind:click="handleClick">开始发牌</i-button>
 	</view>
 </view>
