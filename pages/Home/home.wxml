@@ -1,16 +1,45 @@
 <!-- 首页 -->
-<view class="container">
+<view>
 	<view class="home_banner">
-
+		<view>请选择玩家人数<text class="text-fz28" decode="{{true}}">&nbsp;(不包括法官)</text></view>
+		<view class="text-fz24 text-999">please select the number of players</view>
+		<i-panel title="基础用法">
+			<view style="padding: 16px">
+				<i-input-number value="{{ value1 }}" min="0" max="100" bindchange="handleChange1" />
+			</view>
+		</i-panel>
 	</view>
-	<i-panel title="基础用法">
-		<view style="padding: 16px">
-			<i-input-number value="{{ value1 }}" min="0" max="100" bindchange="handleChange1" />
-		</view>
-	</i-panel>
 	
-	<view class="role-wrapper">
-		身份牌
+	<view class="role-container">
+		<i-row wx:for="i in 3">
+			<i-col span="8">
+				<view class="role-wrapper">
+					<view class="badge">x8</view>
+					<image  src="../../resources/images/role/children.png"></image>
+					<view class="text-fz32 text-center name">野孩子</view>
+					<!-- <view class="text-fz30 text-center bg-red text-white">1号玩家</view> -->
+				</view>
+			</i-col>
+			<i-col span="8">
+				<view class="role-wrapper">
+					<view class="badge">x8</view>
+					<image  src="../../resources/images/role/children.png"></image>
+					<view class="text-fz32 text-center name">野孩子</view>
+					<!-- <view class="text-fz30 text-center bg-red text-white">1号玩家</view> -->
+				</view>
+			</i-col>
+			<i-col span="8">
+				<view class="role-wrapper">
+					<view class="badge">x8</view>
+					<image  src="../../resources/images/role/children.png"></image>
+					<view class="text-fz32 text-center name">野孩子</view>
+					<!-- <view class="text-fz30 text-center bg-red text-white">1号玩家</view> -->
+				</view>
+			</i-col>
+		</i-row>
 	</view>
-	<i-button type="primary" bind:click="handleClick">这是一个按钮</i-button>
+	<view class="home_footer">
+		<view>当前已选12人</view>
+		<i-button type="primary" bind:click="handleClick">开始发牌</i-button>
+	</view>
 </view>

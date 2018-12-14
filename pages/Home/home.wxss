@@ -1,12 +1,51 @@
-.container{
-	color:#333;
-	height: 100vh;
-	background-size: contain;
-	background-repeat:no-repeat; 
-	background-size:100% 100%;
-	-moz-background-size:100% 100%;
+.home_banner{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color:#fff;
+	height: 300rpx;
+	background: #000;
+}
+.role-container{
+	padding:20rpx 30rpx;
+	margin-bottom: 60px;
 }
 .role-wrapper{
+	margin-right: 20rpx;
+	margin-bottom: 20rpx;
+	position: relative;
+	padding:10rpx;
+	background: #fff;
+	border-radius: 8rpx;
+}
+.role-wrapper image{
+	width: 100px;
+	height:90px;
+}
+.role-wrapper .badge{
+	display: flex;
+	position: absolute;
+	align-items: center;
+	justify-content: center;
+	right: -5px;
+	top: 0;
+	font-size: 14px;
+	color: #fff;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
 	background: red;
-	opacity: 0.5;
+}
+.home_footer{
+	opacity: 0.9;
+	color: #fff;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	position: fixed;
+	height: 60px;
+	bottom: 0;
+	background: rgb(0,0,0);
 }

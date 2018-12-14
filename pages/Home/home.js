@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-      value1: 1,
+      value1: 6,
   },
 
   handleChange1 ({ detail }) {
