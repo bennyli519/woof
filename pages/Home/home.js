@@ -8,7 +8,9 @@ Page({
   data: {
       playerNum:6,     
       minPlayers: 6, // 默认玩家
-      roleList:app.globalData.RoleList
+      woofNum:2,
+      peopleNum:4,
+      //roleList:app.globalData.RoleList
   },
 
   //stepper事件
@@ -17,6 +19,11 @@ Page({
       this.setData({
         playerNum: detail.value
       })
+  },
+  normalChange ({detail}){
+    this.setData({
+      peopleNum:detail.value
+    })
   },
 
   /**

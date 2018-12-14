@@ -21,7 +21,7 @@
 }
 .role-wrapper image{
 	width: 100%;
-	height:90px;
+	height:120px;
 }
 .role-wrapper .badge{
 	display: flex;

@@ -12,19 +12,63 @@
 	
 	<view class="role-container">
 		<i-row >
-			<i-col span="8" wx:for="{{roleList}}" wx:for-item="item" wx:key>
+			<i-col span="8">
 				<view class="role-wrapper">
-					<view class="badge">x{{item.Num}}</view>
+					<view class="badge">x{{peopleNum}}</view>
 					<view class="img-wrapper">
-						<image  src="{{item.Photo}}"></image>
+						<image mode="aspectFill" src="../../resources/images/role/gun.png"></image>
 						<!-- <view class="disable">
 							x
 						</view> -->
 					</view>
-					<view class="text-fz32 text-center name">{{item.RoleName}}</view>
+					<view class="text-fz32 text-center name">
+						<i-input-number 
+							i-class="text-blue" 
+							size="small" 
+							value="{{ peopleNum }}" 
+							min="2" 
+							max="10" 
+							bindchange="normalChange" />
+					</view>
 
 				</view>
 			</i-col>
+
+			<i-col span="8">
+				<view class="role-wrapper">
+					<view class="badge">x{{peopleNum}}</view>
+					<view class="img-wrapper">
+						<image mode="aspectFill" src="../../resources/images/role/gun.png"></image>
+						<!-- <view class="disable">
+							x
+						</view> -->
+					</view>
+					<view class="text-fz32 text-center name">
+						<i-input-number 
+							i-class="text-blue" 
+							size="small" 
+							value="{{ peopleNum }}" 
+							min="2" 
+							max="10" 
+							bindchange="normalChange" />
+					</view>
+
+				</view>
+			</i-col>
+
+			<i-col span="8">
+				<view class="role-wrapper">
+					<view class="badge">x1</view>
+					<view class="img-wrapper">
+						<image mode="aspectFill" src="../../resources/images/role/gun.png"></image>
+						<!-- <view class="disable">
+							x
+						</view> -->
+					</view>
+
+				</view>
+			</i-col>
+
 		</i-row>
 	</view>
 	<view class="home_footer">

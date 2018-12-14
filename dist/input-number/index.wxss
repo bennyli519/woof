@@ -41,3 +41,15 @@
 	color: #bbbec4;
 	background: #f7f7f7
 }
+
+.i-input-number-size-small view{
+	display: inline-block;
+	line-height: 20px;
+	padding: 5px 0;
+	text-align: center;
+	min-width: 25px;
+	box-sizing: border-box;
+	vertical-align: middle;
+	font-size: 12px;
+	border: 1rpx solid #dddee1;
+}

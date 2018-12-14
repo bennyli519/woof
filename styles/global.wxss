@@ -43,7 +43,7 @@ page {
 }
 
 .text-blue {
-    color: #009887;
+    color: #009887 !important;
 }
 
 .text-red {
