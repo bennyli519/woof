@@ -10,7 +10,7 @@ page {
 }
 
 .bg-red {
-    background-color: #da4866 !important;
+    background-color:rgb(175, 23, 23) !important;
 }
 
 .bg-blue {
@@ -43,7 +43,7 @@ page {
 }
 
 .text-blue {
-    color: #009887;
+    color: #009887 !important;
 }
 
 .text-red {

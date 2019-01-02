@@ -1,29 +1,36 @@
 // pages/Home/home.js
+let app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-      value1: 1,
+      playerNum:6,     
+      minPlayers: 6, // 默认玩家
+      woofNum:2,
+      peopleNum:4,
+      //roleList:app.globalData.RoleList
   },
 
-  handleChange1 ({ detail }) {
+  //stepper事件
+  handleChange ({ detail }) {
+      console.log('adsfa')
       this.setData({
-          value1: detail.value
+        playerNum: detail.value
       })
+  },
+  normalChange ({detail}){
+    this.setData({
+      peopleNum:detail.value
+    })
   },
 
-  handleChange2 ({ detail }) {
-      this.setData({
-          value2: detail.value
-      })
-  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(app.globalData.CurrentList)
   },
 
   /**

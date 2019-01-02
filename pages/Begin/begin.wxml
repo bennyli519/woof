@@ -1,2 +1,13 @@
 <!--开始游戏页-->
-<text>pages/Begin/begin.wxml</text>
+<view id="begin">
+	<view class="begin_container">
+		<view class="content">
+			<view class="tips1"><text>天\黑\请</text><text>闭/眼</text></view>
+			<view class="tips bg-red">IT'S GETTING DARK.</view>
+		</view>
+	</view>
+	<view class="begin_btn">
+		<view class="text-fz60">开始游戏</view>
+		<view class="text-fz30">( 由法官操作 ）</view>
+	</view>
+</view>

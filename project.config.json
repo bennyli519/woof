@@ -36,12 +36,31 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 3,
 			"list": [
 				{
 					"id": -1,
 					"name": "拍照",
-					"pathName": "pages/Shoot/shoot"
+					"pathName": "pages/Shoot/shoot",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "开始游戏",
+					"pathName": "pages/Begin/begin",
+					"query": ""
+				},
+				{
+					"id": 2,
+					"name": "游戏中",
+					"pathName": "pages/Play/play",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "首页",
+					"pathName": "pages/Home/home",
+					"query": ""
 				}
 			]
 		}
