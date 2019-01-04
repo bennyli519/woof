@@ -1,84 +1,88 @@
 // pages/Home/home.js
 let app = getApp();
+const { $Message } = require('../../dist/base/index');
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-      playerNum:6,     
-      minPlayers: 6, // 默认玩家
-      woofNum:2,
-      peopleNum:4,
-      //roleList:app.globalData.RoleList
+      roleList:app.globalData.RoleList,//所有角色列表
+      player:app.globalData.player, //玩家人数
+      selectPlayer:0,//已分配玩家人数
   },
 
-  //stepper事件
+  //玩家数量改变
   handleChange ({ detail }) {
-      console.log('adsfa')
       this.setData({
-        playerNum: detail.value
+        player: detail.value
       })
   },
-  normalChange ({detail}){
+  //角色数量改变
+  normalChange (detail){
+    this.data.roleList[detail.target.dataset.index].Num = detail.detail.value;
+    if(this.getRoleNum() > this.data.player){
+      $Message({
+          content: '已达到最大玩家人数',
+          type: 'error'
+      });
+      this.data.roleList[detail.target.dataset.index].Num = detail.detail.value-1;
+      this.setData({
+        selectPlayer:this.data.player
+      })
+    }
     this.setData({
-      peopleNum:detail.value
+      roleList:this.data.roleList,
     })
   },
+  //获取已分配的角色数量
+  getRoleNum(){
+    let roles = 0;
+    this.data.roleList.forEach(e => {
+      roles += e.Num;
+    });
+    this.setData({
+      selectPlayer:roles
+    })
+    return roles;
+  },
+  //开始发牌
+  playGame(){
+    let playsArr=[];
+    this.data.roleList.forEach(e=>{
+      if(e.Num != 0){
+        let i = e.Num;
+        while(i){
+          playsArr.push(e)
+          i-=1;
+        }
+      }
+    });
+    app.randomRole(playsArr);
+    //保存配置至全局
+    app.globalData.RoleList = this.data.roleList;
+    app.globalData.player = this.data.player;
+  },  
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(app.globalData.CurrentList)
+    this.getRoleNum();
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    // setInterval(()=>{
+    //  // console.log(app.randomRole([1,2,3,4,5,6,7,8,9,10]))
+    // },2000)
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
+  
   onShow: function () {
 
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
 })

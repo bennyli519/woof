@@ -4,70 +4,81 @@ App({
 
   },
   globalData: {
+    //角色列表 //身份类型(0=>民 1=>狼  2=>神)
     RoleList:[
       {
         RoleId:1001,
         RoleName:'平民',
-        RoleType:0,         //身份类型(0=>民 1=>狼  2=>神)
-        Photo:'../../resources/images/role/children.png',
+        RoleType:0,         
+        Photo:'../../resources/images/role/pm.jpg',
         Num:4,
       },
       {
         RoleId:1002,
         RoleName:'狼人',
-        RoleType:1,         //身份类型(0=>民 1=>狼  2=>神)
-        Photo:'../../resources/images/role/woof.png',
+        RoleType:1,
+        Photo:'../../resources/images/role/langren.jpg',
         Num:4,
       },
       {
         RoleId:1003,
         RoleName:'预言家',
         RoleType:2,
-        Photo:'../../resources/images/role/god.png',
+        Photo:'../../resources/images/role/yyj.jpg',
         Num:1,
       },
       {
         RoleId:1004,
         RoleName:'女巫',
         RoleType:2,
-        Photo:'../../resources/images/role/witch.png',
+        Photo:'../../resources/images/role/nw.jpg',
         Num:1,
       },
       {
         RoleId:1005,
         RoleName:'守卫',
         RoleType:2,
-        Photo:'../../resources/images/role/god.png',
+        Photo:'../../resources/images/role/sw.jpg',
         Num:1,
       },
       {
         RoleId:1006,
         RoleName:'猎人',
         RoleType:2,
-        Photo:'../../resources/images/role/children.png',
+        Photo:'../../resources/images/role/lieren.jpg',
         Num:1,
       },
+      {
+        RoleId:1007,
+        RoleName:'白痴',
+        RoleType:2,
+        Photo:'../../resources/images/role/bc.jpg',
+        Num:0,
+      },
+  
     ],
-    CurrentList: [   //玩家列表（配置好人数后点开始游戏,打乱身份 并存入该列表）
-                     //后续拍照啥的都存到这个列表 
+    //玩家列表
+    CurrentList: [
       {
         Id:1,
+        UserName:"Benny",
         RoleName:'狼人',
         RoleType:1,
-        playerPic:'照片地址',
+        playerPic:'玩家照片',
       },
-      {
-        Id:2,
-        RoleName:'平民',
-        RoleType:0,
-        playerPic:'照片地址',
-      },
-      {
-        Id:3,
-        RoleName:'平民',
-        RoleType:0,
-        playerPic:'照片地址',
-      }
-    ]
+    ],
+    player:12, //默认玩家人数
+  },
+  //随机分配身份
+  randomRole(arr) {
+    let i = arr.length, t, j;
+    while (i) {
+      j = Math.floor(Math.random() * i--);
+      t = arr[i];
+      arr[i] = arr[j];
+      arr[j] = t;
+    }
+    return arr;
   }
+
 })
