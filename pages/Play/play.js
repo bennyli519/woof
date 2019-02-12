@@ -1,11 +1,11 @@
 // pages/Play/play.js
+let app = getApp();
 Page({
 
-  /**
-   * 页面的初始数据
-   */
-  data: {
 
+  data: {
+    playerData: "",//玩家数据
+    isShowRole: false,
   },
 
   /**
@@ -19,7 +19,10 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    this.setData({
+      playerData: app.globalData
+    })
+    console.log(this.data.playerData)
   },
 
   /**
@@ -28,39 +31,20 @@ Page({
   onShow: function () {
 
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  startViewRole() {
+    this.setData({
+      isShowRole: !this.data.isShowRole
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
+  endViewRole() {
+    this.setData({
+      isShowRole: !this.data.isShowRole
+    })
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
+  clickPlayer(e) {
+    console.log(e)
 
   }
+
+
 })

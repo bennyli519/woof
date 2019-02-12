@@ -6,7 +6,7 @@
 			<view class="tips bg-red">IT'S GETTING DARK.</view>
 		</view>
 	</view>
-	<view class="begin_btn">
+	<view class="begin_btn" bindtap="startGame">
 		<view class="text-fz60">开始游戏</view>
 		<view class="text-fz30">( 由法官操作 ）</view>
 	</view>

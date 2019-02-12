@@ -58,10 +58,17 @@ Page({
         }
       }
     });
-    app.randomRole(playsArr);
+    playsArr.forEach((e)=>{
+      e.UserName="";
+      e.playerPic="";
+    })
     //保存配置至全局
+    app.globalData.CurrentList = app.randomRole(playsArr);
     app.globalData.RoleList = this.data.roleList;
     app.globalData.player = this.data.player;
+    wx.navigateTo({
+      url:'/pages/Shoot/shoot'
+    })
   },  
 
   /**
@@ -75,9 +82,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    // setInterval(()=>{
-    //  // console.log(app.randomRole([1,2,3,4,5,6,7,8,9,10]))
-    // },2000)
+  
   },
 
   

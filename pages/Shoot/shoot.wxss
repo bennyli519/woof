@@ -1,71 +1,84 @@
 /**index.wxss**/
 
-.shoot_header{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding:0 40rpx;
-  height: 200rpx;
-  color:#fff;
-  background: #000;
+.shoot_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40rpx;
+    height: 200rpx;
+    color: #fff;
+    background: #000;
 }
-.shoot_pic-pan{
-  box-shadow: 0 0 10rpx #eee;
-  padding:20rpx 20rpx 40rpx;
-  margin:0 40rpx;
-  margin-top:-50rpx;
-  background: #fff;
-  border-radius: 4px;
-}
-.shoot_pic-wrapper{
-  height: 700rpx;
-}
-.shoot_pic-wrapper camera{
-  height: 100%;
-}
-.shoot_pic-wrapper image{
-  height: 100%;
-  width: 100%;
-}
-.shoot_pic-message{
-  margin-top: 40rpx;
-  display: flex;
-}
-.pic-left{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 0 0 100rpx;
-  color:#fff;
-  height: 100rpx;
-  border-radius: 50%;
-}
-.pic-right{
-  margin-left: 20rpx;
-  flex:1;
 
+.shoot_pic-pan {
+    box-shadow: 0 0 10rpx #eee;
+    padding: 20rpx 20rpx 40rpx;
+    margin: 0 40rpx;
+    margin-top: -50rpx;
+    background: #fff;
+    border-radius: 4px;
+}
+
+.shoot_pic-wrapper {
+    height: 700rpx;
+}
+
+.shoot_pic-wrapper camera {
+    height: 600rpx;
+}
+
+.shoot_pic-wrapper image {
+    height: 100%;
+    width: 100%;
+}
+
+.shoot_pic-message {
+    margin-top: 40rpx;
+    display: flex;
+}
+
+.pic-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 100rpx;
+    color: #fff;
+    height: 100rpx;
+    border-radius: 50%;
+}
+
+.pic-right {
+    margin-left: 20rpx;
+    flex: 1;
 }
 
 .userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+    width: 128rpx;
+    height: 128rpx;
+    margin: 20rpx;
+    border-radius: 50%;
 }
 
 .userinfo-nickname {
-  color: #aaa;
+    color: #aaa;
 }
 
 .usermotto {
-  margin-top: 200px;
+    margin-top: 200px;
 }
-.mgb40{
-  margin-bottom: 40rpx;
+
+.mgb40 {
+    margin-bottom: 40rpx;
+}
+
+.img-user {
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
 }

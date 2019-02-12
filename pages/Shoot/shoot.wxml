@@ -1,5 +1,5 @@
 <!-- 拍摄页 -->
-<view id="shoot">
+<view id="shoot" hidden="{{currentIndex == playData.CurrentList.length}}">
   <view class="shoot_header"> 
       <navigator class="text-fz28 mgb40">返回</navigator>
       <view class="header_right text-right mgb40">
@@ -7,25 +7,21 @@
         <view class="text-fz24 text-999">Please check your identity</view>
       </view>
   </view> 
-  <view class="shoot_pic-pan">
+  <view class="shoot_pic-pan" wx:for="{{playData.CurrentList}}" wx:for-index="index" wx:if="{{index == currentIndex}}" wx:key>
     <!-- <view class="shoot_pic-wrapper">图片</view> -->
     <view class="shoot_pic-wrapper" >
-        <camera wx:if="{{!isTaken}}" device-position="front" flash="off" binderror="error" ></camera>
-
-      <image wx:else src='../../resources/images/role/children.png'></image>
+      <camera wx:if="{{!isTaken}}" device-position="front" flash="off" binderror="error" ></camera>
+      <image wx:else src="{{item.Photo}}"></image>
     </view>
     <view class="shoot_pic-message">
-      <view class="pic-left bg-red">1</view>
+      <view class="pic-left bg-red">{{index+1}}</view>
       <view class="pic-right">
         <view class="text-fz36">号玩家</view>
-        <view class="text-666 text-fz28">点击输入名称(选填)</view>
+        <input class="text-666 text-fz28" placeholder="点击输入名称(选填)" value="{{currentName}}" bindinput="inpName" />
       </view>
+      <image class="img-user" src="{{currentPhoto}}"></image>
     </view>
   </view>
   <i-button wx:if="{{!isTaken}}" type="primary" bindtap="takePhoto">拍摄</i-button>
-  <i-button wx:else type="primary">查看完毕,传递给下一个玩家</i-button>
-  <!-- 
-  <button type="primary" >拍照</button>
-  <view>预览</view>
-   -->
+  <i-button wx:else type="primary" bindtap="nextPlayer">查看完毕,传递给下一个玩家</i-button>
 </view>
