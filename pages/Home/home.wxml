@@ -9,8 +9,14 @@
 				<i-input-number value="{{player}}" min="6" max="100" bindchange="handleChange" />
 			</view>
 		</i-panel>
+		<!-- <radio-group class="radio-group" bindchange="radioChange">
+			<label class="radio" wx:for="{{items}}">
+				<radio value="{{item.name}}" checked="{{item.checked}}" />
+				{{item.value}}
+			</label>
+		</radio-group> -->
 	</view>
-	
+
 	<view class="role-container">
 		<i-row>
 			<i-col span="8" wx:for="{{roleList}}" wx:for-index="index" wx:key>
@@ -20,14 +26,8 @@
 						<image mode="aspectFill" src="{{item.Photo}}"></image>
 					</view>
 					<view class="text-fz32 text-center name">
-						<i-input-number 
-							i-class="text-blue" 
-							size="small" 
-							value="{{item.Num}}" 
-							min="0" 
-							max="20" 
-							bindchange="normalChange"
-							data-index="{{index}}" />
+						<i-input-number i-class="text-blue" size="small" value="{{item.Num}}" min="0" max="20"
+							bindchange="normalChange" data-index="{{index}}" />
 					</view>
 
 				</view>
@@ -37,6 +37,6 @@
 	<view class="home_footer">
 		<view>当前已选{{selectPlayer}}人</view>
 		<i-button type="primary" wx:if="{{selectPlayer<player}}" disabled>开始发牌</i-button>
-		<i-button type="primary"wx:else bind:click="playGame">开始发牌</i-button>
+		<i-button type="primary" wx:else bind:click="playGame">开始发牌</i-button>
 	</view>
 </view>

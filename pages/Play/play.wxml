@@ -14,16 +14,25 @@
 			<view class="text-fz30 text-center bg-red text-white">1号玩家</view>
 		</view> -->
 		<i-row>
-			<i-col span="6" wx:for="{{playerData.CurrentList}}" wx:key wx:for-index="index" data-index="{{index}}"
-				bindtap="clickPlayer">
+			<i-col span="6" wx:for="{{playerData.CurrentList}}" wx:key wx:for-index="index" data-index="{{index}}">
 				<view class="player_wrapper">
-					<image mode="aspectFit" wx:if="{{!isShowRole}}" src="{{playerData.userData[index].playerPic}}">
+					<image mode="aspectFit" wx:if="{{!isShowRole && !userOption[index].isShowRole}}"
+						bindtap="clickPlayer" data-index="{{index}}" src="{{playerData.userData[index].playerPic}}">
 					</image>
 					<image mode="aspectFit" wx:else src="{{item.Photo}}"></image>
-					<div class="die text-center text-red">x</div>
+					<!-- 玩家死亡 -->
+					<div class="die text-center text-red" wx:if="{{userOption[index].isOver}}">x</div>
+
 					<view class="text-fz26 text-center name">{{playerData.userData[index].UserName || "狼人杀宝宝"}}
 					</view>
 					<view class="text-fz30 text-center bg-red text-white">{{index+1}}号玩家</view>
+					<view class="options text-center text-fz26 text-666" wx:if="{{userOption[index].isShowOptions}}">
+						<view bindtap="userOver" data-index="{{index}}">死亡</view>
+						<view bindtap="showRole" data-index="{{index}}">查看身份</view>
+						<view bindtap="cancel" data-index="{{index}}">取消</view>
+					</view>
+					<view class="return text-center text-fz26 text-white" bindtap="return" data-index="{{index}}"
+						wx:if="{{userOption[index].isShowRole}}">返回</view>
 				</view>
 			</i-col>
 		</i-row>

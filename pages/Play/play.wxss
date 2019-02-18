@@ -65,3 +65,31 @@
     left: 0;
     bottom: 0;
 }
+
+.options {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: black;
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.options view {
+    height: 60rpx;
+    line-height: 60rpx;
+    background-color: #f1f1f1;
+}
+
+.return {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    height: 40rpx;
+}

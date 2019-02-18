@@ -25,21 +25,21 @@ App({
         RoleName: '预言家',
         RoleType: 2,
         Photo: '../../resources/images/role/yyj.jpg',
-        Num: 0,
+        Num: 1,
       },
       {
         RoleId: 1004,
         RoleName: '女巫',
         RoleType: 2,
         Photo: '../../resources/images/role/nw.jpg',
-        Num: 0,
+        Num: 1,
       },
       {
         RoleId: 1005,
         RoleName: '守卫',
         RoleType: 2,
         Photo: '../../resources/images/role/sw.jpg',
-        Num: 0,
+        Num: 1,
       },
       {
         RoleId: 1006,
@@ -59,7 +59,7 @@ App({
     ],
     //玩家列表
     CurrentList: [],
-    player: 6, //默认玩家人数
+    player: 9, //默认玩家人数
     userData: [],
   },
   //随机分配身份
