@@ -1,0 +1,13 @@
+<view class='translate'>
+  <input class='search-word text-fz26' placeholder='自动检测语言翻译' bindinput='inputTranslate' value='{{translateWord}}'></input>
+  <button class='translate-btn' bindtap='translate'>
+    <i-icon type="search" size="28" color="#666" />
+  </button>
+</view>
+<view class='translate-src text-fz30' wx:if="{{translateRes.src}}">
+  “{{translateRes.src}}”
+</view>
+<view class='translate-target' wx:if="{{translateRes.tgt}}">
+  <view class='text-fz26 text-666 res'>翻译结果</view>
+  <view class='text-fz30'>“{{translateRes.tgt}}”</view>
+</view>

@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/Translate/Translate",
     "pages/Home/home",
     "pages/Shoot/shoot",
     "pages/Play/play",
@@ -9,7 +10,8 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "狼人杀",
+    "navigationBarTitleText": "翻译",
     "navigationBarTextStyle": "black"
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

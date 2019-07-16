@@ -1,0 +1,43 @@
+page {
+  background-color: white;
+  padding: 0 25rpx;
+  box-sizing: border-box;
+}
+
+.translate {
+  display: flex;
+}
+
+.search-word {
+  flex: 1;
+  padding: 0 25rpx;
+  height: 60rpx;
+  background-color: #f1f1f1;
+  border-radius: 8rpx;
+}
+
+.translate-btn {
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 30rpx;
+  background-color:transparent;
+  padding-right: 0;
+}
+
+.translate-btn::after {
+  border: none;
+}
+.translate-src{
+  margin: 50rpx 0;
+  border-radius: 8rpx;
+  padding: 25rpx;
+  background-color: #f1f1f1;
+}
+.translate-target{
+  border-radius: 8rpx;
+  padding: 25rpx;
+  background-color: #f1f1f1;
+}
+.translate-target .res{
+  padding-bottom: 30rpx;
+}

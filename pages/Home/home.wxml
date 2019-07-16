@@ -9,12 +9,6 @@
 				<i-input-number value="{{player}}" min="6" max="100" bindchange="handleChange" />
 			</view>
 		</i-panel>
-		<!-- <radio-group class="radio-group" bindchange="radioChange">
-			<label class="radio" wx:for="{{items}}">
-				<radio value="{{item.name}}" checked="{{item.checked}}" />
-				{{item.value}}
-			</label>
-		</radio-group> -->
 	</view>
 
 	<view class="role-container">
