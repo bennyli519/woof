@@ -41,3 +41,6 @@ page {
 .translate-target .res{
   padding-bottom: 30rpx;
 }
+.every-day-word-target{
+  padding: 20rpx 0;
+}

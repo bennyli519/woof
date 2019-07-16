@@ -1,3 +1,8 @@
+<view class='every-day-word translate-src'>
+  <view class='text-fz28'>每日一句</view>
+  <view class='text-fz30 every-day-word-target'>Living without an aim is like sailing without a compass</view>
+  <view class='text-fz30'>生活没有目标，犹如航海没有罗盘。</view>
+</view>
 <view class='translate'>
   <input class='search-word text-fz26' placeholder='自动检测语言翻译' bindinput='inputTranslate' value='{{translateWord}}'></input>
   <button class='translate-btn' bindtap='translate'>
