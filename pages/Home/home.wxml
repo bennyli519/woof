@@ -4,11 +4,15 @@
 	<view class="home_banner">
 		<view>请选择玩家人数<text class="text-fz28" decode="{{true}}">&nbsp;(不包括法官)</text></view>
 		<view class="text-fz24 text-999">please select the number of players</view>
-		<i-panel>
 			<view style="padding: 16px">
 				<i-input-number value="{{player}}" min="6" max="100" bindchange="handleChange" />
 			</view>
-		</i-panel>
+		<!-- <radio-group class="radio-group" bindchange="radioChange">
+			<label class="radio" wx:for="{{items}}">
+				<radio value="{{item.name}}" checked="{{item.checked}}" />
+				{{item.value}}
+			</label>
+		</radio-group> -->
 	</view>
 
 	<view class="role-container">

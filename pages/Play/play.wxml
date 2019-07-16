@@ -1,7 +1,7 @@
 <!-- 游戏中 界面 -->
 <view id="play">
 	<view class="play_header">
-		<navigator class="text-fz28 mgb40">返回</navigator>
+		<!-- <navigator class="text-fz28 mgb40">返回</navigator> -->
 		<view class="header_right text-right mgb40">
 			<view>请法官主持游戏</view>
 			<view class="text-fz24 text-999">Let the judge preside over the game</view>

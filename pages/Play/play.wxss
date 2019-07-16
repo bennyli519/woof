@@ -8,7 +8,7 @@
 
 .play_header {
     display: flex;
-    justify-content: space-between;
+    flex-direction:row-reverse;
     align-items: center;
     padding: 0 40rpx;
     height: 200rpx;

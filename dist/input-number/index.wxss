@@ -11,7 +11,7 @@
 	box-sizing: border-box;
 	vertical-align: middle;
 	font-size: 12px;
-	border: 1rpx solid #dddee1;
+	border: 1px solid #dddee1;
 }
 
 .i-input-number-minus {
@@ -25,7 +25,7 @@
 }
 
 .i-input-number-text {
-	border: 1rpx solid #dddee1;
+	border: 1px solid #dddee1;
 	display: inline-block;
 	text-align: center;
 	vertical-align: middle;
