@@ -39,14 +39,14 @@ App({
         RoleName: '守卫',
         RoleType: 2,
         Photo: '../../resources/images/role/sw.jpg',
-        Num: 1,
+        Num: 0,
       },
       {
         RoleId: 1006,
         RoleName: '猎人',
         RoleType: 2,
         Photo: '../../resources/images/role/lieren.jpg',
-        Num: 0,
+        Num: 1,
       },
       {
         RoleId: 1007,
